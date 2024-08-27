@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --env-file .env.development src/index.ts",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
     "dist": "npx tsc",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "lint": "eslint",
@@ -26,8 +26,12 @@
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.9.1",
+    "@types/cors": "^2.8.17",
     "@types/eslint__js": "^8.42.3",
+    "@types/express": "^4.17.21",
+    "@types/helmet": "^4.0.0",
     "@types/node": "^22.5.0",
+    "@types/source-map-support": "^0.5.10",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.5",
@@ -39,6 +43,13 @@
     "typescript-eslint": "^8.2.0"
   },
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "colorette": "^2.0.20",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "source-map-support": "^0.5.21",
+    "winston": "^3.14.2"
   }
 }

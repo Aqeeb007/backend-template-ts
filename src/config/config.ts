@@ -1,3 +1,7 @@
+import dotenv from 'dotenv-flow'
+
+dotenv.config()
+
 export default {
     ENV: process.env.ENV,
     PORT: process.env.PORT,
