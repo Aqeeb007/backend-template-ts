@@ -1,9 +1,5 @@
- 
- 
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
- 
+/* eslint-disable @typescript-eslint/no-unsafe-argument */ 
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
 import util from 'util'
 import { createLogger, format, transports } from 'winston'
 import { ConsoleTransportInstance, FileTransportInstance } from 'winston/lib/winston/transports'

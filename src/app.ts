@@ -6,11 +6,6 @@ import path from 'path'
 const app = express()
 
 // Middleware
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '../', 'public')))
-
- 
 app.use(helmet())
 app.use(
     cors({
@@ -19,6 +14,9 @@ app.use(
         credentials: true
     })
 )
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, '../', 'public')))
 
 // Routes
 import apiRouter from './router/apiRouter'
@@ -26,8 +24,6 @@ import { ApiError } from './utils/ApiError'
 import responseMessages from './constants/responseMessages'
 
 app.use('/api/v1', apiRouter)
-
-
 
 // Error Handling
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
