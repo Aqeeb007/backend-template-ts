@@ -9,8 +9,8 @@ const app = express()
 app.use(helmet())
 app.use(
     cors({
-        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'],
-        origin: ['https://client.com'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD', 'PATCH'],
+        origin: ['*'],
         credentials: true
     })
 )
